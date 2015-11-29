@@ -80,7 +80,7 @@ class LoginViewController: UIViewController {
         
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("OnKeyboardDidShow:"), name: UIKeyboardDidShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("OnKeyboardDidHide"), name: UIKeyboardDidHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("OnKeyboardDidHide:"), name: UIKeyboardDidHideNotification, object: nil)
         self.view.moveBegin()
         
     }
@@ -125,9 +125,42 @@ class LoginViewController: UIViewController {
 
     @IBAction func OnLoginTouchUpInside(sender: UIButton)
     {
-//        let name = loginUserName?.text!
-//        let passwd = loginPassword?.text!
+        let name = loginUserName?.text!
+        let passwd = loginPassword?.text!
         
+        let result = LMLogin.loginValid(name, passwd: passwd)
+        if result != LoginResult.OK
+        {
+            OnLoginError(result, msg:nil)
+            return
+        }
+        
+        LMLogin .login(name!, passwd: passwd, success: { (data, response) -> Void in
+            do
+            {
+                let dict = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments ) as! NSDictionary
+            
+                let dataInfo:NSDictionary = dict["data"] as! NSDictionary
+                
+                //
+                let user = LMUser(dictionary: dataInfo)
+                LocalUser.Login(user.loginName , passwd: user.Password)
+                
+                
+            }
+            catch let e as NSError
+            {
+                NSLog("%@", e.description)
+            }
+            
+            
+            }) { (result, msg) -> Void in
+                //失败处理
+                
+        }
+    }
+    func OnLoginError(reason: LoginResult, msg:String?)
+    {
         
     }
     

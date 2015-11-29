@@ -18,6 +18,8 @@
 		E34A4E341C0AAE13006F8366 /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E331C0AAE13006F8366 /* LocalUser.swift */; settings = {ASSET_TAGS = (); }; };
 		E34A4E361C0AC271006F8366 /* LMConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E351C0AC271006F8366 /* LMConfig.swift */; settings = {ASSET_TAGS = (); }; };
 		E34A4E381C0ACC1E006F8366 /* LMLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E371C0ACC1E006F8366 /* LMLogin.swift */; settings = {ASSET_TAGS = (); }; };
+		E34A4E3A1C0AE468006F8366 /* LMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E391C0AE468006F8366 /* LMUser.swift */; settings = {ASSET_TAGS = (); }; };
+		E34A4E3E1C0B009E006F8366 /* LMLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E3D1C0B009E006F8366 /* LMLogin.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		E34A4E331C0AAE13006F8366 /* LocalUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
 		E34A4E351C0AC271006F8366 /* LMConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMConfig.swift; sourceTree = "<group>"; };
 		E34A4E371C0ACC1E006F8366 /* LMLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMLogin.swift; sourceTree = "<group>"; };
+		E34A4E391C0AE468006F8366 /* LMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMUser.swift; sourceTree = "<group>"; };
+		E34A4E3B1C0B009E006F8366 /* LibraryManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LibraryManagement-Bridging-Header.h"; sourceTree = "<group>"; };
+		E34A4E3C1C0B009E006F8366 /* LMLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLogin.h; sourceTree = "<group>"; };
+		E34A4E3D1C0B009E006F8366 /* LMLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLogin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 				E34A4E201C0AA556006F8366 /* LaunchScreen.storyboard */,
 				E34A4E231C0AA556006F8366 /* Info.plist */,
 				E34A4E1B1C0AA556006F8366 /* LibraryManagement.xcdatamodeld */,
+				E34A4E3B1C0B009E006F8366 /* LibraryManagement-Bridging-Header.h */,
 			);
 			path = LibraryManagement;
 			sourceTree = "<group>";
@@ -84,9 +91,12 @@
 		E34A4E291C0AA568006F8366 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E34A4E3C1C0B009E006F8366 /* LMLogin.h */,
+				E34A4E3D1C0B009E006F8366 /* LMLogin.m */,
 				E34A4E311C0AA9C8006F8366 /* LoginViewController.swift */,
 				E34A4E331C0AAE13006F8366 /* LocalUser.swift */,
 				E34A4E371C0ACC1E006F8366 /* LMLogin.swift */,
+				E34A4E391C0AE468006F8366 /* LMUser.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -140,6 +150,7 @@
 		E34A4E091C0AA556006F8366 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Oyoung;
 				TargetAttributes = {
@@ -184,6 +195,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E34A4E3E1C0B009E006F8366 /* LMLogin.m in Sources */,
+				E34A4E3A1C0AE468006F8366 /* LMUser.swift in Sources */,
 				E34A4E321C0AA9C8006F8366 /* LoginViewController.swift in Sources */,
 				E34A4E171C0AA556006F8366 /* MainViewController.swift in Sources */,
 				E34A4E381C0ACC1E006F8366 /* LMLogin.swift in Sources */,
@@ -302,10 +315,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LibraryManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hacker.LibraryManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LibraryManagement/LibraryManagement-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -313,10 +329,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LibraryManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hacker.LibraryManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LibraryManagement/LibraryManagement-Bridging-Header.h";
 			};
 			name = Release;
 		};

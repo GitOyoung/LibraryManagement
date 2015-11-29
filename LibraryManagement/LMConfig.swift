@@ -36,5 +36,10 @@ class LMConfig: NSObject {
             self._normalOrigin = newOrigin
         }
     }
+    
+    func baseUrl() ->String
+    {
+        return "http://120.55.189.165:8081/chaofan/login/doLogin"
+    }
 
 }

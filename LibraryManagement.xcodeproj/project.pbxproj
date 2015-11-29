@@ -13,6 +13,7 @@
 		E34A4E1D1C0AA556006F8366 /* LibraryManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E1B1C0AA556006F8366 /* LibraryManagement.xcdatamodeld */; };
 		E34A4E1F1C0AA556006F8366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E34A4E1E1C0AA556006F8366 /* Assets.xcassets */; };
 		E34A4E221C0AA556006F8366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34A4E201C0AA556006F8366 /* LaunchScreen.storyboard */; };
+		E34A4E2E1C0AA5A6006F8366 /* UIView+ConstraintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E2D1C0AA5A6006F8366 /* UIView+ConstraintHelper.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E34A4E1E1C0AA556006F8366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E34A4E211C0AA556006F8366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E34A4E231C0AA556006F8366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E34A4E2D1C0AA5A6006F8366 /* UIView+ConstraintHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ConstraintHelper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,10 @@
 		E34A4E131C0AA556006F8366 /* LibraryManagement */ = {
 			isa = PBXGroup;
 			children = (
+				E34A4E2C1C0AA57F006F8366 /* LayoutTool */,
+				E34A4E2B1C0AA578006F8366 /* Admin */,
+				E34A4E2A1C0AA56F006F8366 /* Student */,
+				E34A4E291C0AA568006F8366 /* Login */,
 				E34A4E141C0AA556006F8366 /* AppDelegate.swift */,
 				E34A4E161C0AA556006F8366 /* ViewController.swift */,
 				E34A4E181C0AA556006F8366 /* Main.storyboard */,
@@ -65,6 +71,35 @@
 				E34A4E1B1C0AA556006F8366 /* LibraryManagement.xcdatamodeld */,
 			);
 			path = LibraryManagement;
+			sourceTree = "<group>";
+		};
+		E34A4E291C0AA568006F8366 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		E34A4E2A1C0AA56F006F8366 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Student;
+			sourceTree = "<group>";
+		};
+		E34A4E2B1C0AA578006F8366 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Admin;
+			sourceTree = "<group>";
+		};
+		E34A4E2C1C0AA57F006F8366 /* LayoutTool */ = {
+			isa = PBXGroup;
+			children = (
+				E34A4E2D1C0AA5A6006F8366 /* UIView+ConstraintHelper.swift */,
+			);
+			name = LayoutTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E34A4E171C0AA556006F8366 /* ViewController.swift in Sources */,
+				E34A4E2E1C0AA5A6006F8366 /* UIView+ConstraintHelper.swift in Sources */,
 				E34A4E151C0AA556006F8366 /* AppDelegate.swift in Sources */,
 				E34A4E1D1C0AA556006F8366 /* LibraryManagement.xcdatamodeld in Sources */,
 			);

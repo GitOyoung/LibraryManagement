@@ -10,6 +10,40 @@ import UIKit
 
 extension UIView
 {
+    
+    
+    func moveBegin()
+    {
+        LMConfig.defaultConfig().normalOrigin = self.frame.origin
+    }
+    
+    func moveTo(origin: CGPoint)
+    {
+        var frame:CGRect = self.frame
+        frame.origin = origin
+        self.frame = frame
+    }
+    
+    func moveForKeyBoardShow(keyboardSize: CGSize)
+    {
+        var origin = LMConfig.defaultConfig().normalOrigin
+        origin.y -= keyboardSize.height
+        moveTo(origin)
+    }
+    
+    func moveForKeyBoardHide(keyboardSize: CGSize)
+    {
+        let origin = LMConfig.defaultConfig().normalOrigin
+        moveTo(origin)
+    }
+    
+    static func CGRectGetCenter(rect: CGRect) ->CGPoint
+    {
+        return CGPoint(x: rect.origin.x + rect.width / 2, y: rect.origin.y + rect.height / 2)
+    }
+    
+
+    
     func makeConstraintOrigin(origin: CGPoint) -> Void
     {
         if self.superview == nil

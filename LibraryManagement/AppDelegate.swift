@@ -13,10 +13,17 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var mainView: MainViewController?
 
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+    {
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        mainView = MainViewController()
+        
+        window?.rootViewController = mainView!
+        
+        window?.makeKeyAndVisible()
         return true
     }
 

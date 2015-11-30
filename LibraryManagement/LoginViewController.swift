@@ -135,7 +135,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        LMLogin .login(name!, passwd: passwd, success: { (data, response) -> Void in
+        LMLogin.login(name!, passwd: passwd, success: { (data, response) -> Void in
             do
             {
                 let dict = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments ) as! NSDictionary
@@ -144,9 +144,35 @@ class LoginViewController: UIViewController {
                 
                 //
                 let user = LMUser(dictionary: dataInfo)
-                LocalUser.Login(user.loginName , passwd: user.Password)
+                let type:String = "\(user.isAdmin() ? "ADMIN": "STUDENT")"
+                LocalUser.Login(user.loginName , passwd: user.Password, type: type)
+                LMConfig.defaultConfig().defaultUser = user
                 
-                
+                if user.isAdmin()
+                {
+                    //进入管理员界面
+                }
+                else if user.isStudent()
+                {
+                    //进入学生界面
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        
+                        let studentView:StudentViewController = StudentViewController()
+                        let studentNavView:UINavigationController = UINavigationController(rootViewController: studentView)
+                    
+                        self.parentViewController?.addChildViewController(studentNavView)
+                        let parentViewController:MainViewController = self.parentViewController as! MainViewController
+                        parentViewController.transitionFromViewController(parentViewController.currentViewController!, toViewController: studentNavView, duration: 0.8, options: UIViewAnimationOptions.CurveEaseOut, animations: nil, completion: { (done: Bool) -> Void in
+                            if done
+                            {
+                                self.removeFromParentViewController()
+                                
+                                parentViewController.currentViewController = studentNavView
+                            }
+                        })
+                        
+                    })
+                }
             }
             catch let e as NSError
             {
@@ -156,6 +182,7 @@ class LoginViewController: UIViewController {
             
             }) { (result, msg) -> Void in
                 //失败处理
+                print(msg)
                 
         }
     }

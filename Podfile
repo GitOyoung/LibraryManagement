@@ -1,2 +1,5 @@
-platform:ios, "7.0"
-pod 'AFNetWorking', '~> 2.6.2'
+
+platform:ios, '7.0'
+
+pod 'AFNetworking', '~> 3.0.0-beta.2'
+pod 'FMDB', '~> 2.5'

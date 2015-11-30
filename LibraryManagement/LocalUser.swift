@@ -19,7 +19,16 @@ class LocalUser: NSObject {
         return (loginInfo != nil) && ((loginInfo?.objectForKey("LOGIN")?.isEqualToString("TRUE"))!)
     }
     
-    static func Login(name: String?, passwd: String?) ->Void
+    static func isAdmin() -> Bool
+    {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        let loginInfo:NSDictionary? = userDefaults.objectForKey("Local") as? NSDictionary
+        
+        return (loginInfo != nil) && ((loginInfo?.objectForKey("Type")?.isEqualToString("ADMIN"))!)
+    }
+    
+    static func Login(name: String?, passwd: String?, type: String?) ->Void
     {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let loginInfo:NSDictionary? = (userDefaults.objectForKey("Local") as? NSDictionary)
@@ -36,7 +45,8 @@ class LocalUser: NSObject {
         
         newInfo.setObject(name!, forKey: "Name")
         newInfo.setObject(passwd!, forKey: "Password")
-        newInfo.setObject("FALSE", forKey: "LOGIN")
+        newInfo.setObject("TRUE", forKey: "LOGIN")
+        newInfo.setObject(type!, forKey: "Type")
         
         userDefaults.setObject(newInfo, forKey: "Local")
         userDefaults.synchronize()
@@ -54,7 +64,7 @@ class LocalUser: NSObject {
         }
         
         let newInfo:NSMutableDictionary! = NSMutableDictionary(dictionary: loginInfo!)
-        newInfo.setObject("TRUE", forKey: "LOGIN")
+        newInfo.setObject("FALSE", forKey: "LOGIN")
         
         userDefaults.setObject(newInfo, forKey: "Local")
         userDefaults.synchronize()

@@ -30,9 +30,29 @@ class LMUser: NSObject {
         self.createDate = dictionary["createDate"] as? String
         self.updatedBy = dictionary["updatedBy"] as? String
     }
+    
+    func isAdmin() ->Bool
+    {
+        let type =  status?.integerValue
+        if type == nil
+        {
+            return false
+        }
+        return type == 1
+    }
+    
+    func isStudent() ->Bool
+    {
+        let type =  status?.integerValue
+        if type == nil
+        {
+            return false
+        }
+        return type == 2
 
-//    
-//    {"user_id":"1","login_name":"liming","mobile":"","email":"","passwor d":"2026f90a089b6d4ad4e013549e7b8df7257e0dc1","salt":"00ffaa9636b7ef3f","stat us":2,"user_type":9,"del_flag":0,"has_real":0,"nick":"李明 ","pay_pass":"","sessionid":"2be232a694f6edd26462e13fc8d785a4","createdBy":"" ,"createdDate":"Nov 20, 2015 10:39:19 PM","updatedBy":""}}
+    }
+    
+
     private var pay_pass:String?
     var PayPass:String {
         get {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3365B571C0C74B1002DCCC6 /* SRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3365B561C0C74B1002DCCC6 /* SRecordViewController.swift */; };
 		E34A4E151C0AA556006F8366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E141C0AA556006F8366 /* AppDelegate.swift */; };
 		E34A4E171C0AA556006F8366 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E161C0AA556006F8366 /* MainViewController.swift */; };
 		E34A4E1A1C0AA556006F8366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34A4E181C0AA556006F8366 /* Main.storyboard */; };
@@ -19,9 +20,18 @@
 		E34A4E361C0AC271006F8366 /* LMConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E351C0AC271006F8366 /* LMConfig.swift */; };
 		E34A4E381C0ACC1E006F8366 /* LMLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E371C0ACC1E006F8366 /* LMLogin.swift */; };
 		E34A4E3A1C0AE468006F8366 /* LMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A4E391C0AE468006F8366 /* LMUser.swift */; };
+		E3DBA8A31C0C127B00F15510 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBA8A21C0C127B00F15510 /* StudentViewController.swift */; };
+		E3DBA8A51C0C12B100F15510 /* SHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBA8A41C0C12B100F15510 /* SHomeTableViewController.swift */; };
+		E3DBA8A71C0C15C200F15510 /* SCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBA8A61C0C15C200F15510 /* SCenterViewController.swift */; };
+		E3DBA8A91C0C1D1000F15510 /* DataTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBA8A81C0C1D1000F15510 /* DataTool.swift */; };
+		FB9BBD280B37BD442587008E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DA808F3E8A78AACB15EB9E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30A46FB3A4C202C54E2FFE55 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		942FBBD4AD5567618E9A9775 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B6DA808F3E8A78AACB15EB9E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3365B561C0C74B1002DCCC6 /* SRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRecordViewController.swift; sourceTree = "<group>"; };
 		E34A4E111C0AA556006F8366 /* LibraryManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibraryManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34A4E141C0AA556006F8366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E34A4E161C0AA556006F8366 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +47,10 @@
 		E34A4E371C0ACC1E006F8366 /* LMLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMLogin.swift; sourceTree = "<group>"; };
 		E34A4E391C0AE468006F8366 /* LMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMUser.swift; sourceTree = "<group>"; };
 		E34A4E3B1C0B009E006F8366 /* LibraryManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LibraryManagement-Bridging-Header.h"; sourceTree = "<group>"; };
+		E3DBA8A21C0C127B00F15510 /* StudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
+		E3DBA8A41C0C12B100F15510 /* SHomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHomeTableViewController.swift; sourceTree = "<group>"; };
+		E3DBA8A61C0C15C200F15510 /* SCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCenterViewController.swift; sourceTree = "<group>"; };
+		E3DBA8A81C0C1D1000F15510 /* DataTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,17 +58,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB9BBD280B37BD442587008E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0C9A1A71C1CBE24665AB6EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6DA808F3E8A78AACB15EB9E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0690D6101ED3F54D7D8EECC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				942FBBD4AD5567618E9A9775 /* Pods.debug.xcconfig */,
+				30A46FB3A4C202C54E2FFE55 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E34A4E081C0AA556006F8366 = {
 			isa = PBXGroup;
 			children = (
 				E34A4E131C0AA556006F8366 /* LibraryManagement */,
 				E34A4E121C0AA556006F8366 /* Products */,
+				E0690D6101ED3F54D7D8EECC /* Pods */,
+				A0C9A1A71C1CBE24665AB6EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +103,7 @@
 		E34A4E131C0AA556006F8366 /* LibraryManagement */ = {
 			isa = PBXGroup;
 			children = (
+				E3DBA89F1C0C0ECB00F15510 /* DataTool */,
 				E34A4E2C1C0AA57F006F8366 /* LayoutTool */,
 				E34A4E2B1C0AA578006F8366 /* Admin */,
 				E34A4E2A1C0AA56F006F8366 /* Student */,
@@ -99,6 +134,10 @@
 		E34A4E2A1C0AA56F006F8366 /* Student */ = {
 			isa = PBXGroup;
 			children = (
+				E3DBA8A21C0C127B00F15510 /* StudentViewController.swift */,
+				E3DBA8A41C0C12B100F15510 /* SHomeTableViewController.swift */,
+				E3DBA8A61C0C15C200F15510 /* SCenterViewController.swift */,
+				E3365B561C0C74B1002DCCC6 /* SRecordViewController.swift */,
 			);
 			name = Student;
 			sourceTree = "<group>";
@@ -114,9 +153,17 @@
 			isa = PBXGroup;
 			children = (
 				E34A4E2D1C0AA5A6006F8366 /* UIView+ConstraintHelper.swift */,
-				E34A4E351C0AC271006F8366 /* LMConfig.swift */,
 			);
 			name = LayoutTool;
+			sourceTree = "<group>";
+		};
+		E3DBA89F1C0C0ECB00F15510 /* DataTool */ = {
+			isa = PBXGroup;
+			children = (
+				E34A4E351C0AC271006F8366 /* LMConfig.swift */,
+				E3DBA8A81C0C1D1000F15510 /* DataTool.swift */,
+			);
+			name = DataTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E34A4E261C0AA556006F8366 /* Build configuration list for PBXNativeTarget "LibraryManagement" */;
 			buildPhases = (
+				355AE0A5C360A5D87B4EA518 /* Check Pods Manifest.lock */,
 				E34A4E0D1C0AA556006F8366 /* Sources */,
 				E34A4E0E1C0AA556006F8366 /* Frameworks */,
 				E34A4E0F1C0AA556006F8366 /* Resources */,
+				1051F41EE8746E8D022146FD /* Embed Pods Frameworks */,
+				66F4E421F27B2824F3D9BD34 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,20 +235,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1051F41EE8746E8D022146FD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		355AE0A5C360A5D87B4EA518 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66F4E421F27B2824F3D9BD34 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E34A4E0D1C0AA556006F8366 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3DBA8A31C0C127B00F15510 /* StudentViewController.swift in Sources */,
+				E3DBA8A71C0C15C200F15510 /* SCenterViewController.swift in Sources */,
 				E34A4E3A1C0AE468006F8366 /* LMUser.swift in Sources */,
+				E3365B571C0C74B1002DCCC6 /* SRecordViewController.swift in Sources */,
 				E34A4E321C0AA9C8006F8366 /* LoginViewController.swift in Sources */,
 				E34A4E171C0AA556006F8366 /* MainViewController.swift in Sources */,
 				E34A4E381C0ACC1E006F8366 /* LMLogin.swift in Sources */,
+				E3DBA8A91C0C1D1000F15510 /* DataTool.swift in Sources */,
 				E34A4E2E1C0AA5A6006F8366 /* UIView+ConstraintHelper.swift in Sources */,
 				E34A4E151C0AA556006F8366 /* AppDelegate.swift in Sources */,
 				E34A4E341C0AAE13006F8366 /* LocalUser.swift in Sources */,
 				E34A4E361C0AC271006F8366 /* LMConfig.swift in Sources */,
 				E34A4E1D1C0AA556006F8366 /* LibraryManagement.xcdatamodeld in Sources */,
+				E3DBA8A51C0C12B100F15510 /* SHomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +410,7 @@
 		};
 		E34A4E271C0AA556006F8366 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 942FBBD4AD5567618E9A9775 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -321,6 +425,7 @@
 		};
 		E34A4E281C0AA556006F8366 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30A46FB3A4C202C54E2FFE55 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

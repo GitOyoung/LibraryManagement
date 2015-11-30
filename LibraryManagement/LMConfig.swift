@@ -19,27 +19,45 @@ class LMConfig: NSObject {
         }
         return config!
     }
+  
     
     private override init()
     {
-        _normalOrigin = CGPoint(x: 0, y: 0)
+        configDict = [String: Any]()
     }
-    private var _normalOrigin:CGPoint
+    private var configDict:[String: Any]?
+    
     var normalOrigin: CGPoint
     {
         get
         {
-            return self._normalOrigin
+            return configDict!["normalOrigin"] as! CGPoint
         }
         set(newOrigin)
         {
-            self._normalOrigin = newOrigin
+            configDict!["normalOrigin"] = newOrigin
         }
     }
     
     func baseUrl() ->String
     {
         return "http://120.55.189.165:8081/chaofan/login/doLogin"
+    }
+    
+    func dataBasePath() ->String
+    {
+        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let path = paths[0]
+        return "\(path)/BookInfo.sqlite"
+    }
+    
+    var defaultUser:LMUser? {
+        get {
+            return configDict!["defaultUser"] as? LMUser
+        }
+        set(newUser) {
+            configDict!["defaultUser"] = newUser
+        }
     }
 
 }

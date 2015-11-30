@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         loginButton = UIButton()
         
         
-        loginUserName?.placeholder = "UserName"
+        loginUserName?.placeholder = "YourName"
         loginPassword?.placeholder = "Password"
         
         loginUserName?.textAlignment = NSTextAlignment.Center

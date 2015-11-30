@@ -50,14 +50,14 @@ class LMLogin: NSObject
         config.timeoutIntervalForRequest = 15
         let session = NSURLSession(configuration: config, delegate: nil, delegateQueue: nil)
         
-        do {
+        
         let task =  session.dataTaskWithURL(url)
             { (data, response, error) -> Void in
             
             if error == nil
             {
-
-                let dict =  NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
+                do {
+                let dict =  try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
                 let code = dict["code"] as! String
                 let msg = dict["msg"] as! String
                 
@@ -70,7 +70,11 @@ class LMLogin: NSObject
                     failure(LoginResult.ErrorUserNameOrPassword, msg: msg)
                 }
                 
-             
+                }
+                catch let e as NSError
+                {
+                    print(e)
+                }
             }
             else
             {
@@ -81,11 +85,7 @@ class LMLogin: NSObject
         }
         
         task.resume()
-        }
-        catch
-        {
-            
-        }
+      
     }
         
 }
